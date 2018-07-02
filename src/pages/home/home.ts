@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { LugarPage } from '../lugar/lugar';
 
 @Component({
@@ -7,13 +7,13 @@ import { LugarPage } from '../lugar/lugar';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  
   constructor(public navCtrl: NavController) {
-
+    
   }
 
-  irLugar(){
-   this.navCtrl.push(LugarPage); 
+  irLugar(name){
+   this.navCtrl.push(LugarPage, {nombre: name}); 
   }
 
 }
