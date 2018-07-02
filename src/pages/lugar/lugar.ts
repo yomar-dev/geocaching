@@ -24,4 +24,8 @@ export class LugarPage {
     console.log('ionViewDidLoad LugarPage');
   }
 
+  navigateBack(){
+    this.navCtrl.pop();
+  }
+
 }
