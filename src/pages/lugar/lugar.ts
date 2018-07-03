@@ -23,7 +23,9 @@ export class LugarPage {
   }
 
   guardarLugar(){
-    this.lugar.id = Date.now();
+    if(!this.lugar.id){
+      this.lugar.id = Date.now();
+    }
     this.lugaresService.createLugar(this.lugar);
     console.log(this.lugar);
   }
