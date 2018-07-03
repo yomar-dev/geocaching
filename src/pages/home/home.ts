@@ -30,7 +30,9 @@ export class HomePage {
   }
 
   deleteLugar(lugar){
-    return this.lugaresService.deleteLugar(lugar);
+    if(confirm("Desea borrar esté lugar ?")){
+      return this.lugaresService.deleteLugar(lugar);
+    }
   }
 
 }
