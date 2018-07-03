@@ -11,6 +11,9 @@
 **Angular Fire2:** `npm install angularfire2 firebase promise-polyfill --save`<br>
 
 
+> **Nota:** Para solucionar el problema a la hora de obtener la información de Firebase debemos instalar la siguiente dependencia: `npm install rxjs@6 rxjs-compat@6 --save`. <br>
+
+
 
 ### Enlaces de interes:
 
