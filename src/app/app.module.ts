@@ -11,6 +11,19 @@ import { PerfilPage } from '../pages/perfil/perfil';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TerceraPage } from '../pages/tercera/tercera';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyBaluyocz1i58KivQAZ-i0aRfguZIRUV0c",
+    authDomain: "curso-basico-ionic.firebaseapp.com",
+    databaseURL: "https://curso-basico-ionic.firebaseio.com",
+    projectId: "curso-basico-ionic",
+    storageBucket: "curso-basico-ionic.appspot.com",
+    messagingSenderId: "741317974927"
+}
+
 @NgModule({
   declarations: [
     MyApp,
@@ -22,7 +35,10 @@ import { TerceraPage } from '../pages/tercera/tercera';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
