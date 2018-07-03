@@ -22,11 +22,15 @@ export class HomePage {
   }
 
   irLugar(name){
-   this.navCtrl.push(LugarPage, {nombre: name}); 
+   this.navCtrl.push(LugarPage, {nombre: name});
   }
 
   vistaDetalle(){
-    alert("Hola Mundo!!");
+    this.navCtrl.push(LugarPage, {lugar: {}});
+  }
+
+  vistaDetalleExistente(lugar){
+    this.navCtrl.push(LugarPage, {lugar: lugar});
   }
 
 }
