@@ -29,4 +29,8 @@ export class HomePage {
     this.navCtrl.push(LugarPage, {lugar: lugar});
   }
 
+  deleteLugar(lugar){
+    return this.lugaresService.deleteLugar(lugar);
+  }
+
 }
